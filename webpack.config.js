@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('.html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
@@ -43,7 +43,7 @@ module.exports = {
     hot: true
   },*/
   plugins: [
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve("./public/index.html"),
     }),
